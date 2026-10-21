@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pretório</title>
+<meta name="description" content="Pretório — software para escritórios de advocacia. GUANABARA INVESTIMENTOS E PARTICIPACOES LTDA, CNPJ 20.042.165/0001-33.">
+<meta name="robots" content="index, follow">
+<style>
+  /* Fraunces · italic 500 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/fraunces-italic-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* Fraunces · italic 500 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/fraunces-italic-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* Fraunces · normal 500 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-variavel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* Fraunces · normal 500 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-variavel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* Fraunces · normal 600 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-variavel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* Fraunces · normal 600 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-variavel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* Fraunces · normal 700 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-variavel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* Fraunces · normal 700 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/fraunces-normal-variavel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* IBM Plex Sans · normal 400 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('fonts/ibm-plex-sans-normal-variavel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* IBM Plex Sans · normal 400 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('fonts/ibm-plex-sans-normal-variavel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* IBM Plex Sans · normal 500 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('fonts/ibm-plex-sans-normal-variavel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* IBM Plex Sans · normal 500 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('fonts/ibm-plex-sans-normal-variavel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* IBM Plex Sans · normal 600 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('fonts/ibm-plex-sans-normal-variavel-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* IBM Plex Sans · normal 600 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url('fonts/ibm-plex-sans-normal-variavel-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* IBM Plex Mono · normal 400 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ibm-plex-mono-normal-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* IBM Plex Mono · normal 400 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/ibm-plex-mono-normal-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  /* IBM Plex Mono · normal 500 · latin-ext — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/ibm-plex-mono-normal-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+  /* IBM Plex Mono · normal 500 · latin — servida no próprio domínio, licença OFL em fonts/ */
+  @font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/ibm-plex-mono-normal-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  :root {
+    --papel: #F2F0EA;
+    --papel-card: #FCFBF6;
+    --tinta: #1B2420;
+    --tinta-suave: #4A554F;
+    --tinta-fraca: #5F6A64;
+    --linha: #D9D5C9;
+    --verde-trib: #1F5C46;
+    --ouro: #C9A84C;
+    --bordo: #6E1B2D;
+    --marfim: #F3EFE7;
+    --disp: 'Fraunces', Georgia, serif;
+    --sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  /* barra do topo — a da Mesa */
+  .topo {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+    background: var(--verde-trib);
+    border-bottom: 2px solid var(--ouro);
+  }
+  .selo-mini {
+    flex: 0 0 auto;
+    width: 30px; height: 30px;
+    background: var(--verde-trib);
+    border: 1.2px solid var(--ouro);
+    box-shadow: inset 0 0 0 2px var(--verde-trib), inset 0 0 0 3px var(--ouro);
+    border-radius: 3px;
+    transform: rotate(-4deg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--disp); font-weight: 700; font-size: 16px;
+    color: var(--ouro);
+    user-select: none;
+  }
+  .topo .marca {
+    font-family: var(--disp); font-weight: 700; font-size: 21px;
+    letter-spacing: .5px; color: var(--marfim);
+  }
+  .topo .marca span { color: var(--ouro); }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 20px 48px;
+  }
+
+  /* bloco da marca — o do Hall */
+  .hall { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
+  .selo {
+    flex: 0 0 auto;
+    width: 64px; height: 64px;
+    background: var(--verde-trib);
+    border: 1.8px solid var(--ouro);
+    box-shadow: inset 0 0 0 4px var(--verde-trib), inset 0 0 0 5.5px var(--ouro);
+    border-radius: 5px;
+    transform: rotate(-4deg);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--disp); font-weight: 700; font-size: 34px;
+    color: var(--ouro);
+    user-select: none;
+  }
+  .hall .marca {
+    font-family: var(--disp); font-weight: 700; font-size: 40px;
+    letter-spacing: .4px; line-height: 1.1; margin: 0;
+  }
+  .hall .marca span { color: var(--bordo); }
+  .marca-sub {
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--tinta-fraca); margin-top: 4px;
+  }
+  .frase {
+    font-family: var(--disp); font-style: italic; font-weight: 500;
+    font-size: 20px; color: var(--tinta-suave);
+    margin: 0 0 40px;
+  }
+
+  .cartao {
+    background: var(--papel-card);
+    border: 1px solid var(--linha);
+    border-left: 3.5px solid var(--verde-trib);
+    border-radius: 10px;
+    padding: 24px 26px;
+    box-shadow: 0 1px 3px rgba(27,36,32,.06);
+  }
+  .rotulo {
+    font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--tinta-fraca); font-weight: 600;
+    display: flex; align-items: center; gap: 12px;
+    margin: 0 0 18px;
+  }
+  .rotulo::after { content: ""; flex: 1; height: 1px; background: var(--linha); }
+  dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 10px 24px; }
+  dt { color: var(--tinta-fraca); font-size: 14px; padding-top: 1px; }
+  dd { margin: 0; }
+  .num { font-family: var(--mono); font-size: 15px; }
+  a { color: var(--verde-trib); text-underline-offset: 2px; }
+  a:hover { color: var(--tinta); }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px 20px 48px;
+    border-top: 1px dashed var(--linha);
+    color: var(--tinta-fraca);
+    font-size: 13px;
+    display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between;
+  }
+
+  @media (max-width: 560px) {
+    main { padding-top: 40px; }
+    .selo { width: 52px; height: 52px; font-size: 28px; }
+    .hall .marca { font-size: 32px; }
+    .frase { font-size: 18px; }
+    dl { grid-template-columns: 1fr; gap: 2px; }
+    dd { margin-bottom: 12px; }
+  }
+</style>
+</head>
+<body>
+<header class="topo" aria-label="Pretório">
+  <div class="selo-mini" aria-hidden="true">P</div>
+  <div class="marca">Pretório<span>.</span></div>
+</header>
+
+<main>
+  <div class="hall">
+    <div class="selo" aria-hidden="true">P</div>
+    <div>
+      <h1 class="marca">Pretório<span>.</span></h1>
+      <div class="marca-sub">a bancada do advogado</div>
+    </div>
+  </div>
+  <p class="frase">Software para escritórios de advocacia.</p>
+
+  <section class="cartao" aria-labelledby="empresa">
+    <h2 class="rotulo" id="empresa">Empresa</h2>
+    <dl>
+      <dt>Razão social</dt>
+      <dd>GUANABARA INVESTIMENTOS E PARTICIPACOES LTDA</dd>
+      <dt>CNPJ</dt>
+      <dd class="num">20.042.165/0001-33</dd>
+      <dt>Endereço</dt>
+      <dd>Rua Soraia da Silva Maciel, s/n, Lote 08, Quadra 1319 — Cidade Universitária — Maceió/AL — CEP 57073-630</dd>
+      <dt>Contato</dt>
+      <dd><a href="mailto:suporte@pretorio.com.br">suporte@pretorio.com.br</a></dd>
+      <dt>Privacidade</dt>
+      <dd><a href="mailto:juridico@pretorio.com.br">juridico@pretorio.com.br</a></dd>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <a href="privacidade.html">Política de privacidade</a>
+  <span>© 2026 GUANABARA INVESTIMENTOS E PARTICIPACOES LTDA · Pretório é marca de GUANABARA INVESTIMENTOS E PARTICIPACOES LTDA</span>
+</footer>
+</body>
+</html>
